@@ -68,3 +68,9 @@ if __name__ == '__main__':
     else:
         print("fake node failed")
         
+    print("testing with tampering")
+    B3.data = 1234
+    if B4.previousBlock.computeHash() != B3.computeHash():
+        print("Tampering detected")
+    else:
+        print("WARNING: Tampering not detected")
