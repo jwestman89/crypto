@@ -23,7 +23,7 @@ class Tx:
     def add_input(self, from_addr, amount):
         self.inputs.append(from_addr)
         self.required.append(from_addr)
-        self.in_amount = amount
+        self.in_amount = self.in_amount + amount
 
     def add_output(self, to_addr, amount):
         self.outputs.append(to_addr)
